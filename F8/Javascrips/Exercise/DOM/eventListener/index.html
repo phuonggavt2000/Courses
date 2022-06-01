@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me!</button>
+    <script> // Add Event Listener
+        function viec1(e) {
+            console.log("Vũng tàu")
+        }
+        function viec2(e) {
+            console.log("Hà nội")
+        }
+        var button = document.querySelector("button")
+
+        button.onclick = function (e) { 
+            viec1()
+            viec2() // 1. Thêm onlick bằng cách 1 vào button và chạy viec1 và viec2
+        }
+        button.onclick = function (e) {
+            viec2() // 2. Xóa viec1 và chỉ chạy việc 2
+        }
+
+        button.addEventListener("click",viec1)
+        button.addEventListener("click",viec2)
+        // 3. Thêm onlick bằng cách 2 vào button và chạy viec1 và viec2
+
+        button.removeEventListener("click", viec2) // 4. Xóa viec2 và chỉ chạy viec1
+
+
+        // exercise 
+        // Cách 1
+        // 1. Thêm onlick bằng cách 1 vào button và chạy viec1 và viec2
+        // 2. Xóa viec1 và chỉ chạy việc 2
+        // Cách 2
+        // 1. Thêm onlick bằng cách 2 vào button và chạy viec1 và viec2
+        // 2. Xóa viec2 và chỉ chạy việc một
+    </script>
+</body>
+</html>

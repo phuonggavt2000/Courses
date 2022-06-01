@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <span>ok</span>
+        <ul><li></li></ul>
+    </h1>
+    <script> // innerHTML và OuterHTML: lấy ra node và thêm node mới
+        var element = document.querySelector("h1")
+
+        var elementIn = element.innerHTML // 1. Lấy ra các element trong "h1" thành "sring"
+
+        var elementOut = element.outerHTML // 2. Lấy ra các element đứng từ "h1" thành thành "string"
+
+        element.innerHTML = "<h3> ok </h3>" 
+        // 3. Sửa thẻ "span" thành "h3" và trong thẻ "h1" chỉ còn "h3" và biến "element" sẽ thay đổi theo
+
+        element.outerHTML = "<div> <h1> ok </h1> </div>"
+        // 4. Sủa thẻ "h1" thành "div" bên trong có thẻ "h1" nhưng biến "element" sẽ không thây đổi cần get lại
+
+        console.log(element)
+        // exercise 
+        // 1. Lấy ra các element trong "h1" thành "sring"
+        // 2. Lấy ra các element đứng từ "h1" thành thành "string"
+        // 3. Sửa thẻ "span" thành "h3" và trong thẻ "h1" chỉ còn "h3"
+        // 4. Sủa thẻ "h1" thành "div"
+    </script>
+</body>
+</html>

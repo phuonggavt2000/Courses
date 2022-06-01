@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+
+        .box {
+            /* Cách để hiển Text trong .box mà nằm trong giá trị là width, height */
+            /* Bước 1 */
+            /* width: 100px;
+            height: 100px;
+            color: white;
+            background-color: darkorchid;
+            padding: 16px;
+            border: 2px solid #333; */
+
+            /* bước 2 Cách 1: */
+            /* width: 64px;
+            height: 64px;
+            color: white;
+            background-color: darkorchid;
+            padding: 16px; */
+            /* padding này tương đương width: 16, height: 16 => 32 */
+            /* border: 2px solid #333;  */
+
+            /* bước 2 Cách 2: */
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: darkorchid;
+            padding: 16px;
+            /* padding này tương đương width: 16, height: 16 => Tổng 32 */
+            border: 2px solid #333;
+            /* border Tổng là 4 */
+            box-sizing: border-box;
+            /* box-sizing: Lấy tổng padding + border = 36 trừ đi, 
+            content mặc định là width: 100 - 36 = 64 
+            content mặc định là height: 100 - 36 = 64 */
+            /* Note: Không để padding và border quá lớn */
+
+        }
+
+        .box {
+            box-sizing: unset;
+            /* Sẽ hủy box sizing ở trên */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Đây là nội dung bài viết
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+/* 
+Câu hỏi khi CSS:
+a.Vị tri
+b.Kích thước ( width, height )
+c. Màu sắc
+d. Kiểu dáng ( Kiểu chữ, hình tròn, hình vuông, chiều ngang dọc, ...)
+
+Trong lúc làm:
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới 
+3. Tổng quan đến chi tiết
+ */
+
+/* Khi làm ẩn hiện:
+ 1. Cho nó hiện hết
+ 2. CSS đẹp
+ 3. Rồi mới sử lí di chuột vào hiện
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.text-while {
+    color: #fff;
+}
+
+#main {
+
+}
+
+.gif {
+    height: 50px;
+    width: auto;
+    color: #009688;
+    position: relative;
+    animation: move 5s infinite;
+    opacity: 0.5;
+}
+
+@keyframes move {
+    0%   {top: 0px;}
+  100% {top: 100px;}
+}
+
+body {
+    background-image: url(./Img/Img/giphy.gif);
+    z-index: 1;
+}
+
+
+
+
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(./Img/Img/giphy.gif);
+    z-index: 1;
+}
+
+#nav,
+.subnav {
+    list-style: none;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+    position: relative;
+
+}
+
+#nav>li>a {
+    text-transform: uppercase;
+    
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+#nav li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav>li:hover>a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    min-width: 160px;
+    background-color: #fff;
+}
+
+#nav .icon-down {
+    font-size: 13px;
+}
+
+#header .bnt-search {
+    float: right;
+}
+
+#header .bnt-search:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .icon-search {
+    color: #fff;
+    padding: 0 24px;
+    line-height: 46.5px;
+}
+
+
+
+
+
+#silder {
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 48.5%;
+    background: url('./Img/Slider1/slider1.jpg') top center / cover no-repeat;
+}
+
+.text-silder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.silder-header {
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.silder-content {
+    color: #fff;
+}
+
+
+
+
+
+#content {
+    background: url(./Img/Img/giphy.gif) top / cover no-repeat;
+    z-index: 1;
+
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+#content .content-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0 25px 0;
+    letter-spacing: 4px;
+}
+
+#content .content-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+#content  .about-content {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+
+#content .member-list {
+    padding: 35px 0;
+}
+
+#content .member-item {
+    display: inline-block;
+    text-align: center;
+    width: 32.9%;
+}
+
+
+#content .member-name {
+    margin: 15px 0;
+}
+
+
+#content .member-img {
+    width: 154px;
+}
+/* Tour section */
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    list-style: none;
+}
+
+.tickets-list li {
+    padding: 9px 17px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.sold-out {
+    background-color: red;
+    padding: 3px 4px;
+    color: #fff;
+    margin-left: 9px;
+}
+
+.num-ticket {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+.place-tour {
+    overflow: hidden;
+    margin: 32px -8px;
+}
+
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+img.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-content {
+    background-color: #fff;
+    font-size: 15px;
+    padding: 17px;
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-sub-heading {
+    opacity: 0.6;
+    padding-top: 15px;
+}
+
+.place-body {
+    padding: 15px 0;
+    display: block;
+}
+
+.bnt-buy-tickets {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 17px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.bnt-buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Modal ticket */
+
+.modal-ticket {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-ticket.open {
+    display: flex;
+}
+
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    animation: modalFace ease 0.4s;
+}
+
+.modal-heading {
+    background-color: #009688;
+    height: 129px;
+    position: relative;
+}
+
+.modal-heading-text {
+    text-align: center;
+    line-height: 129px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.icon-close-modal.ti-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    font-size: 12px;
+    background-color: #009688;
+    border: none;
+}
+
+.icon-close-modal.ti-close:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin: 15px 15px;
+    font-size: 15px;
+}
+
+label.lb-modal {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input.input-modal {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+span.pay-ticket {
+    display: block;
+    width: 100%;
+    background-color: #009688;
+    text-align: center;
+    padding: 16px 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+span.pay-ticket:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.contain-footer {
+    overflow: hidden;
+    padding: 15px 15px;
+}
+
+p.modal-footer-text {
+    float: right;
+}
+
+@keyframes modalFace {
+    from {
+        opacity: 0.5;
+        transform: translateY(-124px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+#footer {}

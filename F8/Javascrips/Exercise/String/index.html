@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>               // String 
+         var string = "\\tôi tên là \"phương\""
+        var firstName = "Nguyễn"
+        var lastName = "Phương"
+        var myString = "Toi hoc tai js f8 js luon js"
+        var myString2 = "     Toi hoc tai js f8 js luon js     "
+    console.log(string) 
+    console.log(`tôi tên là ${firstName} ${lastName} `)// 2. nối mằng bằng template string ES6
+    console.log(myString.search("js"))// 3. sử dụng tìm kiếm index của chữ muốn đầu 
+    console.log(myString.indexOf("js", 14)) // 4. tìm kiếm index chữ js thứ 2 của biến mySting
+    console.log(myString.lastIndexOf("js")) // 5. tìm kiếm index chữ js cưới của biến myString
+    console.log(myString.slice(8, 11)) // 6. cắt chữ tai của biến myString
+    console.log(myString.slice(-7, -3)) // 7. cắt chữ luôn của biến myString
+    console.log(myString.replace("hoc", "da lam")) // 8. thay chữ hoc thành chữ da lam trong biến myString
+    console.log(myString.replace(/js/g, "javascripts")) // 9. thay tất cả chữ js thành javascripts
+    console.log(myString.toUpperCase()) // 10. tất cả kí tự thành chữ Hoa
+    console.log(myString.toLowerCase()) // 11. tất cả kí tự thành chữ thường
+    console.log(myString2.trim().length) // 12. xóa tất cả khoảng trắng
+    console.log(myString.split(" ")) // 13. biến myString thành 1 mảng
+    console.log(lastName.split("")) // 14. biến lastName thành 1 mảng
+    console.log(myString.charAt(15)) // 15. cắt kí tự f
+    console.log(myString.charAt(8)) // 16. cắt kí tự t 
+
+        // exercise
+        // 1. thêm 1 dấu "" vào trong chữ phương, dấu \ vào đằng trước chữ tôi "trong string"
+        // 2. Sử dụng template string ES6 để nối firstName và lastName thành "tôi tên là Nguyễn phương"
+        // 3. Tìm vị trí của kí tự "js đầu", "js thứ 2" và "js cuối" trong "myString" -- vị trí đầu 12, giữa 18, cuối 26
+        // 4. Cắt chữ "tai" và chữ "luon" trong "myString"
+        // 5. Sửa chữ "hoc" thành chữ "da lam" và tất cả chữ "js" thành "javascript" trong "myString"
+        // 6. Chuyển biến "myString" thành chuỗi viết Hoa
+        // 7. Chuyển biến "myString" thành chuỗi viết Thường
+        // 8. Xóa khoản cách ở đầu và cuối của biến "myString2" kiểm tra length bằng 28
+        // 9. Cắt biến "myString" thành một "Array" chứa các chữ và cắt biến "lastName" thành 1 "Array" chứa các kí tự
+        // 10. lấy ra kí tự "f" và "t" trong biến "myString"
+    </script>
+</body>
+</html>

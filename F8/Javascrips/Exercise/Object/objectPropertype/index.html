@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>// Object prototype: Là thêm thuộc tính hoặc phương thức lên một đối tượng khi đối tượng đó đã được tạo ra
+        function User(firstName, lastName, avatar) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.avatar = avatar;
+            this.getName = function () {
+                return ` ${lastName} ${firstName}`
+            }
+        }
+        User.prototype.className = "F8" // Thêm thuộc tính vào "prototype" của User
+        User.prototype.getClassName = function () {
+            return this.className // Thêm phương thức vào "prototype" Nên chỉ lấy được className trong phạm vi Key là "prototype"
+        }
+        var author = new User("Phương", "Nguyễn", "avatar"); // Đây là User chính mình
+        var user = new User("Kiên", "Nguyễn", "avatar"); // Đây là User người dùng
+        console.log(author.className) 
+        console.log(user.getClassName()) // lấy ra Key "getClassName" trong "prototype"
+    </script>
+</body>
+
+</html>

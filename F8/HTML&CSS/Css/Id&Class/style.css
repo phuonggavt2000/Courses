@@ -1,0 +1,60 @@
+
+/* Lưu ý, các tên class viết liền nhau, không có khoảng trắng */
+
+/* id thì sử dụng # */
+#first-heading { 
+    color: red;
+}
+
+/* Class thì . */
+.second-heading {
+    color: green;
+}
+/* Lưu ý, các tên class viết liền nhau, không có khoảng trắng */
+
+.second-heading.p2-red {
+    color: yellow;
+}
+
+/* Chọn tất cả thẻ "p" là con của thẻ có class "parent" */
+.parent p {
+    color: blue;
+}
+
+/* Chọn tất cả thẻ có class "children-1" là con của thẻ có class "parent" */
+.parent .children-1 {
+    color: orangered;
+}
+
+/* Lựa chọn toàn bộ các thẻ p */
+p {
+    /* là chữ gạch chân */ 
+    text-decoration: underline;
+}
+
+/* Lựa chọn toàn bộ các thẻ */
+* {
+    /* Chữ nghiêng */
+    font-style: italic;
+}
+
+
+/* Lựa chọn toàn bộ thẻ li là con của class list */
+.list li {
+    color: deepskyblue;
+}
+
+/* Lựa chọn toàn bộ thẻ li là con trực tiếp của thẻ có class list *//* Lựa chọn toàn bộ thẻ li là con trực tiếp của thẻ có class list */
+.list > li {
+    color: fuchsia;
+}
+
+/* Lựa chọn 1 thẻ p đứng liền kề sau class-9 */
+.class-9 + p {
+    color: goldenrod;
+}
+
+/* Lựa chọn toàn bộ thẻ p đứng sau class-10 */
+.class-10 ~ p {
+    color: limegreen;
+}

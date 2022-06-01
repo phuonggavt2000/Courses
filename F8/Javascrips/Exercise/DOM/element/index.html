@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head2">1</div>
+    <div class="head2">
+        <ul>
+            <li>ok</li>
+            <li>ok</li>
+        </ul>
+    </div>
+    <div class="head2">
+        <ul>
+            <li>uk</li>
+            <li>uk</li>
+        </ul>
+    </div>
+    <div class="head2">4</div>
+    <div class="head2">4</div>
+    <script>
+        var ele1 = document.querySelector("div:nth-child(4)") // 1. Lấy ra element "div" có text là "4"
+        var ele2 = document.querySelector("div:nth-child(2)"); 
+        ele2.querySelector("ul") // 2. ấy ra thẻ "div thứ 2" và sau đó lấy ra tất cả con của nó là "ul li"
+        
+        console.log(ele2.querySelector("ul"))
+        // exercise 
+        // 1. Lấy ra element thẻ "div" có text là "4"
+        // 2. lấy ra thẻ "div thứ 2" và sau đó lấy ra tất cả con của nó là "ul li"
+    </script>
+</body>
+</html>

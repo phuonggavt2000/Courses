@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>         // Object là một đối tượng để chứa những thuộc tính và phương thức
+        let myKey = "Address"
+
+        let object = {
+            id: 23,
+            Name: "Nguyễn",
+            coin: 20,
+            [myKey]: "Phuonggavt321@gmail.com" // thêm biến "myKey" vào trong object
+        };
+
+        // what is Object?
+
+        object.email = "phuonggavt321@gmail.com" // 1. thêm key vào Object bằng cách 1
+        object["email"] = "phuonggavt321@gmail.com" // Cách 2
+        console.log(object.id) // 2. lấy ra "value" của "id" trong biến "object" Cách 1
+        console.log(object["id"]) // Cách 2
+        delete object.Name //3. xóa key "Name" trong Object
+        object.getName = function(){ return this.Name } // 4. Tạo Phương thức getName trong Object
+        object.Phone = 0923193656 // 5. tạo 1 thuộc tính trong Object
+        
+
+
+        // exercise
+        // 1. thêm key "email" là "phuonggavt321@gmail.com" bằng 2 cách vào biến "object"
+        // 2. lấy ra "value" của "id" trong biến "object" bằng 2 cách trong biến "object"
+        // 3. Thêm biến "myKey" vào trong biến "object" có value là "Phuongavt321@gmail.com"
+        // 4. Xóa key "Name" trong biến "object"
+        // 5. Tạo ra một phương thức có key "getName" và lấy ra key "Name" trong biến "object"
+        // 6. Tạo ra một thuộc tính "phone" trong biến "object"
+    </script>
+</body>
+
+</html>

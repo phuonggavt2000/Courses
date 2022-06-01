@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+                      // for of dùng để lấy từng phần tử trong mảng hoặc string
+        var arr = [
+            "son dang", "phuong nguyen", "phat nguyen"
+        ]
+        var string = "nguyenvanphuong"
+        var courses = [
+            {
+                id: 1,
+                name: "Javascript",
+                coin: 0,
+                coinText: "giá: 0"
+            },
+            {
+                id: 2,
+                name: "CSS, HTML",
+                coin: 20,
+                coinText: "giá: 0"
+            },
+            {
+                id: 3,
+                name: "Ruby",
+                coin: 18,
+                coinText: "giá: 0"
+            },
+            {
+                id: 4,
+                name: "PHP",
+                coin: 0,
+                coinText: "giá: 0"
+            },
+        ]
+
+        for(var value of arr) {
+            console.log(value) // 1. Lặp và lấy từng phần tử trong mảng
+        }
+
+        for(var value of string) {
+            console.log(value) // 2. Lặp và lấy từng kí tự trong chuỗi
+        }
+
+        for(var value of arr) {
+            for(var kiTu of value) {
+                console.log(kiTu) // 3. Lặp và lấy từng kí tự trong mảng
+            }
+        }
+
+        var total = 0
+        for (var value of courses) {
+            total += value.coin // 4. Tính tổng và lấy từng "coin" trong biến "value"
+        }
+        console.log(total) // Hiện thị tổng
+
+
+        // exercies
+        // 1. lấy từng phần tư của mảng trong arr
+        // 2. lấy từng kí tự  trong string
+        // 3. lấy từng kí tự trong mảng arr
+        // 4. Tính tổng số coin bằng vòng lặp for
+
+    </script>
+</body>
+
+</html>

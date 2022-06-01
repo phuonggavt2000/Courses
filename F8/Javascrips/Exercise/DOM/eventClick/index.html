@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <span>Ok</span>
+    </h1>
+    <h1>
+        <span>Ok1</span>
+    </h1>
+    <h1>
+        <span>Ok2</span>
+    </h1>
+    <script> // Event Click
+        var element = document.querySelector("h1")
+        element.onclick = function (e) {
+            console.log(e.target) // 1. Khi mình ấn vào h1 thì trả về "Elemnt h1 khi mình ấn vào con nó là span thì nó trả về thẻ "span"
+            console.log(this) // 2. Khi nhấn vào nó sẽ trả về biến "Elment"
+        }
+
+        var elements = document.querySelectorAll("h1")
+        
+        for(i = 0; i < elements.length; i++) {
+            elements[i].onclick = function (e) { // 3. Thêm click vào mỗi thẻ "h1"
+                console.log(e.target) 
+            }
+        }
+          // exercise 
+          // 1. Thêm sự kiện "click" vào trong h1 đầu và khi click vào "Ok" sẽ lấy ra thẻ "span"
+          // 2. Khi click vào bất kì thẻ "h1" nào cũng sẽ lấy ra thẻ "span" đó
+    </script>
+</body>
+
+</html>

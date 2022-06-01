@@ -1,0 +1,39 @@
+html {
+    font-size: 20px; 
+    /* dùng để dịnh nghĩa kích thức chữ của rem */
+}
+
+.heading {
+    height: 400px; 
+    /* Định nghĩa chiều cao 400px */
+}
+
+.box {
+    /* Thay đổi kích thước theo phần trăm của trình duyệt */
+    /* width: 60vw;
+    height: 100vh;  */
+    
+    /* % sẽ thay đổi theo kích thức thẻ chữa nó là .heading, thay đổi màn hình sẽ thay đổi theo  */
+    width: 50%; 
+    /* width nều ko gọi đến sẽ auto là 100% */
+    height: 100%; 
+    /* height phải được định nghĩa bằng thẻ chứa thì mới sử dụng % được: 50% tương đương 200px  */
+
+    /* px sẽ dữ nguyên dù có thay đổi gì đi nữa  */
+    /* width: 100px;
+    height: 100px; */
+
+    background-color: red;
+}
+
+/* rem , em  */
+h1 {
+    font-size: 3rem; 
+    /* định nghĩa kích thước theo thẻ html 60px*/
+
+    /* font-size: 3em */
+    /* phụ thuộc vào thẻ gần nhất được định ngĩa chứa nó là html 60px */
+}
+
+/* vw - width, vh - height */
+/* viewport */

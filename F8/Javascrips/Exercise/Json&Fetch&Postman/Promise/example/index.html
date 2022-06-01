@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                id: 1,
+                name: "Kien Dam"
+            },
+            {
+                id: 2,
+                name: "Son Dang"
+            },
+            {
+                id: 3,
+                name: "Son Dam"
+            }
+        ]
+        var comments = [
+            {
+                id: 1,
+                use_id: 1,
+                content: "Anh Son chua ra video :("
+            },
+            {
+                id: 2,
+                use_id: 2,
+                content: "Vua ra xong em oi"
+            }
+        ]
+        function getComments() {
+            return new Promise(function (resolve) {
+                resolve(comments)
+            })
+        }
+
+        function getUserByIds(userIds) {
+            return new Promise(function (resolve) {
+                var result = users.filter(function (value) {
+                    return userIds.includes(value.id)
+                })
+                resolve(result)
+            })
+        }
+
+        getComments()
+            .then(function (comments) {
+                var userIds = comments.map(function (id) {
+                    return id.use_id
+                })
+                return getUserByIds(userIds)
+                    .then(function (users) {
+                        return {
+                            users: users,
+                            comments: comments
+                        }
+                    })
+            })
+            .then(function(data) {
+                console.log(data)
+            })
+
+
+        // 1. Lấy comments
+        // 2. Từ comments lấy ra user_id,
+        // Từ user_id lấy ra user tương ứng
+    </script>
+</body>
+
+</html>

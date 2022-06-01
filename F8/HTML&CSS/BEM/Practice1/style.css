@@ -1,0 +1,60 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    height: 500px;
+    display: flex;
+}
+
+body > div {
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+
+.bnt {
+    margin: auto;
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.bnt:hover {
+}
+
+.bnt + .bnt {
+    margin-left: 16px;
+    /* CSS thằng bnt 2 trở đi */
+}
+
+.bnt--success {
+    background-color: #71be34;
+    transition: height 2s ease, color 2s;
+    height: 100px;
+}
+
+.bnt--success:hover {
+    height: 150px;
+    color: aqua;
+}
+
+.bnt--warn {
+    background-color: #ffb702;
+}
+
+.bnt--danger {
+    background-color: #ff623d;
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+}
+

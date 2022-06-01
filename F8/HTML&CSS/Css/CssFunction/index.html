@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: calc(120px + 23px); 
+            background: rgb(188, 23, 169);
+        }
+
+        a::after {
+            content: "   (" attr(href) ")   ";
+        }
+
+        .box::after {
+            content: attr(data-title);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" data-title="Đây là cái box"></div>
+    <a href="https://fullstack.edu.vn/">Học lập trình   </a>
+    <h1>CSS Function</h1>
+    <ul>
+        <li>var()</li>
+        <li>Linear-gradient()</li>
+        <li>rgba()</li>
+        <li>rgb()</li>
+        <!-- Dùng để phối màu -->
+        <li>calc()</li>
+        <!-- Dùng để tính toán -->
+        <li>attr()</li>
+        <!-- Dùng để hiện giá trị của attribute -->
+    </ul>
+</body>
+</html>

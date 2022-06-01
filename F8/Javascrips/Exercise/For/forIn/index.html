@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> // ForIn: Dùng để lặp để lấy ra đối tượng hoặc phần tử của mảng, chuỗi
+        var myInfo = {
+            name: "Phương",
+            age: 21,
+            address: "Vũng tàu"
+        }
+        for(var key in myInfo) {
+            console.log(key) // 1. Lặp vào lấy ra "key"
+        }
+
+        for(var key in myInfo) {
+            console.log(myInfo[key]) // 2. Lặp lấy ra "value" của "key"
+        }
+        
+        // exercise 
+        // 1. Lấy ra key của biến "myInfo"
+        // 2. lấy ra value của biến "myInfo"
+    </script>
+</body>
+</html>

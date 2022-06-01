@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sleep(ms, num) {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve(num) // 1. Sử dụng Promise sau 1s sẽ tăng thêm 1 giá trị từ 1 > 5 ( sử dụng hàm )
+                }, ms)
+            })
+        }
+        sleep(1000, 1)
+        .then(function(value) {
+            console.log(value)
+            return sleep(1000, value + 1)
+        })
+        .then(function(value) {
+            console.log(value)
+            return sleep(1000, value + 1)
+        })
+        .then(function(value) {
+            console.log(value)
+            return Promise.reject("Bi loi roi!") // 2. Tạo một reject ở số thứ 3 và hiển thị "Bị lỗi rồi"
+        })
+
+        .then(function(value) {
+            console.log(value)
+            return sleep(1000, value + 1)
+        })
+
+        .then(function(value) {
+            console.log(value)
+            return sleep(1000, value + 1)
+        })
+        .catch(function(value) {
+            console.log(value)
+        })
+        
+        // exercise
+        // 1. Sử dụng Promise sau 1s sẽ tăng thêm 1 giá trị từ 1 > 5 ( sử dụng hàm )
+        // 2. Tạo một reject ở số thứ 3 và hiển thị "Bị lỗi rồi"
+    </script>
+</body>
+</html>

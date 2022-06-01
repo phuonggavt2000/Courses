@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var test; // var: Có thể sủa dụng ngoài phạm vi hoạt động, có hosing.
+        console.log(test); // test is undefined
+        test = "say hello";
+
+        var greeting = "hey hi";
+        var times = 4;
+        if (times > 3) {
+            var greeting = "say Hello instead";
+        }
+        console.log(greeting); //"say Hello instead"
+
+
+
+        // let: không thể sử dụng ngoài phạm vi hoạt động, và không có hosing, có thể gán giá trị lần 2 trong phạm vi hoạt động
+        let test;
+        console.log(test); // test Error
+        test = "say hello";
+
+        let greeting = "say Hi";
+        let times = 4;
+        if (times > 3) {
+            let hello = "say Hello instead";
+            console.log(hello); // "say Hello instead"
+        }
+        console.log(hello); // hello is not defined
+
+        let greeting = "say Hi";
+        if (true) {
+            let greeting = "say Hello instead";
+            console.log(greeting); // "say Hello instead"
+        }
+        console.log(greeting); // "say Hi"
+
+
+
+      // const: giống let nhưng chỉ không thể gán giá trị lần 2
+
+        const greeting = "say Hi";
+        greeting = "say Hello instead"; // error : Assignment to constant variable. 
+
+        const greeting = "say Hi";
+        const greeting = "say Hello instead"; // error : Identifier 'greeting' has already been declared
+
+        const greeting = {
+            message: "Hello",
+            number: "five"
+        }
+
+        greeting.message = "say Hello instead";
+        console.log(greeting); // {message:"say Hello instead",number:"five"}
+
+      // var: Có thể sủa dụng ngoài phạm vi hoạt động, có hosing.
+      // let: không thể sử dụng ngoài phạm vi hoạt động, và không có hosing, có thể gán giá trị lần 2 trong phạm vi hoạt động
+      // const: giống let nhưng chỉ không thể gán giá trị lần 2
+    </script>
+</body>
+
+</html>

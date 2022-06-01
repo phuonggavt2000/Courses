@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var promise3 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve([1]) 
+            }, 1000)
+        })
+        var promise4 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve([2,3])
+            }, 1000)
+        })
+        var promise1 = Promise.resolve("Success!")
+        promise1
+        .then(function(value) {
+            console.log(value)
+        })
+        var promise2 = Promise.reject("Error!")
+        .catch(function(value) {
+            console.log(value)
+        })
+        Promise.all([promise3,promise4])
+        .then(function(value) {
+            var result1 = value[0]
+            var result2 = value[1]
+            var newResult = result1.concat(result2)
+            console.log(newResult)
+        })
+        // exercise
+        // 1. Tạo Promise Resolve nhanh hiển thị "Success!"
+        // 2. Tạo Promise Reject nhanh hiển thị "Error!"
+        // 3. Tạo Promise All để nối Promise3 và Promise4 thành 1 mảng
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading-id {
+            color: violet;
+        }
+        /* id - 100 */
+
+        #heading-id.heading-class {
+            color: blue;
+        }
+        /* id - 100, class - 10 => 110   */
+
+        h1#heading-id.heading-class {
+            color: orangered;
+        }
+        /* id - 100, class - 10, tag - 1 => 111 */
+
+        h1 {
+            color: orangered !important;
+        }
+        /* id - 100, important - 10000 => 10100 */
+
+        .heading-class {
+            color: yellow;
+        }
+
+        /* class - 10  */
+
+        h1 {
+            color: green;
+        }
+
+        /* tag - 1 */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: blue !important;" id="heading-id" class="heading-class">Priority?</h1>
+        <!-- Inline - 1000 nên blue được hiện -->
+        <!-- !important - 10000 -->
+        <ol>
+            <li>Internal, External?</li>
+            <!-- Cái nào viết sau thì được ưu tiên  -->
+            <li>Inline - 1000</li>
+            <li>#id - 100</li>
+            <li>.class - 10</li>
+            <li>tag - 1</li>
+            <li>Equal specificity?</li>
+            <li>Universal selector and inherited? </li>
+        </ol>
+    </div>
+</body>
+
+</html>

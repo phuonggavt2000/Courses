@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> // Promise có 3 trạng thái: Pendding, Fulfilled, Rejected.
+         var promise = new Promise(
+            function (resolve, reject) {
+                // 1. resolve: Là thành công khi được gọi đến ".then()" của Promise sẽ được chạy
+                // 2. reject: là thất bại khi được gọi đên ".catch()" của Promise sẽ được chạy
+                resolve([ // 3. Cái đối số của "resolve" sẽ trả về cái tham số của function trong "then()"
+                    {
+                        id: 12,
+                        name: "Phuong",
+                        age: 23
+                    }
+                ])
+
+                reject("Có lỗi") // 4. Cái đối số của "reject" sẽ trả về cái tham số của function trong "catch()"
+            }
+        )
+        promise
+            .then(function (infor) {
+                console.log(infor) // 5. "infor" là đối số của "resolve"
+            })
+            .catch(function (error) {
+                console.log(error) // 6. "errer" là đối số của "reject"
+            })
+            .finally(function () {
+                console.log("Done!") // 7. được chạy khi "resolve" hoặc "reject" được gọi
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 120px;
+            background-color: rgb(190, 124, 234);
+        }
+
+        .box::before {
+            content: "";
+            /* Bắt buộc phải có dù là chuỗi rỗng, để chứa text  */
+            display: block;
+            /* Là một hình khối vuông */
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+        }
+
+        .box::after {
+            content: "Xin chào";
+            /* Bắt buộc phải có dù là chuỗi rỗng, để chứa text  */
+            display: block;
+            /* Là một hình khối vuông */
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            color: black;
+        }
+
+        h1::first-letter {
+            font-size: 50px;
+        }
+
+        h1::first-line {
+            color: red;
+        }
+
+        ::selection {
+            color: beige;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <h1>CSS pseudo-element <br> Dòng 2 </h1>
+    <ul>
+        <li>::before</li>
+        <!-- Sẽ được hiển thị ở đầu -->
+        <li>::after</li>
+        <!-- Sẽ được hiển thị ở cuối -->
+        <li>::first-letter</li>
+        <!-- Chữ cái đầu trong thể sẽ được CSS -->
+        <li>::first-line</li>
+        <!-- Dòng đầu tiên sẽ được CSS -->
+        <li>::selection</li>
+        <!-- Dữ chuột trái kéo sẽ CSS -->
+    </ul>
+</body>
+
+</html>

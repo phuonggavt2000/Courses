@@ -1,0 +1,29 @@
+.card {
+
+}
+
+.card--success .card__bnt {
+    /* Color Green */
+}
+
+.card--error .card__bnt{
+    /* Color Red */
+}
+
+.card__heading {
+
+}
+
+
+.card__desc {
+
+}
+
+
+.card__bnt {
+
+}
+
+.card__bnt--s {
+    
+}

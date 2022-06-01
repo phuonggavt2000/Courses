@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f4f4f5;
+    display: flex;
+    position: relative;
+}
+
+body > div {
+    margin: auto;
+}
+
+.toast {
+   display: flex;
+   justify-content: center;
+   align-content: space-around;
+   align-items: center;
+   background-color: #fff;
+   box-shadow: 0 2px 5px rgba(63, 60, 60, 0.5);
+   padding: 20px 0;
+   border-left: 3px solid;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin-top: 30px;
+   margin-right: 30px;
+   animation: pushInto ease .5;
+}
+
+@keyframes pushInto {
+    from {
+        transform: translateX(calc(100% + 30px))
+    } to {
+        transform: translateX(0);
+    }
+}
+
+
+.toast__body {
+    flex: 1;
+}
+
+.toast--success {
+    border-color: #00FFAB;
+}
+
+.toast--success .toast__check {
+    color: #00FFAB;
+}
+
+.toast--info {
+    border-color: #242F9B;
+}
+
+.toast--info .toast__check {
+    color: #242F9B;
+}
+
+.toast--warning {
+    border-color: #FF8D29;
+}
+
+.toast--warning .toast__check {
+    color: #FF8D29;
+}
+
+.toast--error {
+    border-color: red;
+}
+
+.toast--error .toast__check {
+    color: red;
+}
+
+
+.toast__check,
+.toast__close  {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+
+
+.toast__tittle {
+
+}
+
+.toast__desc {
+
+}
+
+.toast__close {
+    
+}

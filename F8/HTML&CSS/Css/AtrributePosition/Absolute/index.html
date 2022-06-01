@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        li {
+            color: violet;
+        }
+
+        .box {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            position: relative;
+
+        }
+
+.box2 {
+width: 90%;
+height: 110px;
+background-color: rgb(199, 17, 17);
+position: absolute;
+top: 20px;
+left: 20px
+/* box2 này sẽ được đẩy xuống 20px, và đẩy qua phải 20px */
+
+/*Note: Thẻ cha là .box được gán position nên tọa độ sẽ lấy từ thẻ .box */
+}
+
+.box-child {
+background-color: rgba(54, 30, 177, 0.5);
+/* Màu trong suốt nên kết hợp với màu đỏ sẽ ra màu khác */
+position: absolute;
+right: 0;
+top: 0;
+left: 0;
+bottom: 0;
+
+/* Note: Khi cho 4 góc bằng 0 nó sẽ lấy tọa độ cả 4 góc, vì không có width và height nên nó sẽ phủ hết nguyên .box2 */
+}
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box2">
+           <div class="box-child"></div> 
+        </div>
+    </div>
+
+    <h1>Position</h1>
+    <ul>
+        <li>Absolute</li>
+        <!-- Vị trí tuyệt đối -->
+        <!-- Sẽ lấy thằng thẻ cha gần nhất có position là góc tọa độ -->
+    </ul>
+</body>
+
+</html>

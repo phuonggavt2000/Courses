@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-2">
+        hi
+    </div>
+    <script> // ClassList
+        var elementDiv = document.querySelector("div") 
+        
+        elementDiv.classList.add("red")// 1. thêm 1 phần tử trong class là "red"
+        
+        console.log(elementDiv.classList.contains("box-2"))// 2. Kiểm tra xem phần tử "box-2" có trong class trả về "true"
+
+        elementDiv.classList.remove("box")// 3. Xóa phần tử "box" trong class
+
+        elementDiv.classList.toggle("green")// 4. Vì "green" không có trong class nên được thêm vào
+        elementDiv.classList.toggle("box-2")// 5. Vì "box-2" có trong class nên bị xóa đi
+
+        console.log(elementDiv.classList)// 6. Trả về một mảng chứa phần tử của class
+
+        console.log(elementDiv.classList.value)// 7. lấy ra value của class
+
+        setTimeout(() => {
+            elementDiv.classList.toggle("green")// 8. làm cho chữ hi sau 3s "class green" sẽ bị xóa nên nó thành mầu đỏ
+        }, 3000);
+
+        setInterval(() => {
+            elementDiv.classList.toggle("green") // 9. Sau 3s "green" sẽ bị xóa đi, sau 3s tiếp sẽ được thêm vào "lặp vô tận"
+        }, 3000);
+
+        // 1. thêm 1 phần tử trong class là "red"
+        // 2. Kiểm tra xem phần tử "box-2" có trong class không
+        // 3. Xóa phần tử "box" trong class
+        // 4. Thêm "green" và xóa "box-2" trong class
+        // 5. Lấy ra mảng chữa phần tử của class
+        // 6. lấy ra value của class
+        // 7. làm cho chữ hi sau 3s sẽ chuyển mầu đỏ
+        // 8. làm cho chữ hi 3s hiển thị mầu đỏ, 3s sau sẽ màu xanh
+    </script>
+</body>
+</html>

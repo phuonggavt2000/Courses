@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var promise = Promise.resolve("Success!")
+        .then(function(value) { // 1. Khi muốn tất cả đêu thành công thì sử dụng Promise nhanh
+            console.log(value)
+        })
+        
+        var promise1 = Promise.reject("Error")
+        .catch(function(err) { // 2. Khi muốn thất bại sử dụng Promise nhanh
+            console.log(err)
+        })
+
+        var promise2 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve([1]) 
+            }, 1000)
+        })
+        var promise3 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve([2,3])
+            }, 1000)
+        })
+        Promise.all([promise2, promise3]) // 3. Sử dụng PromiseAll sẽ cộng 2 đối số của resolve lại thành 1 mảng
+        .then(function(result) { // 4. Sử lí nó như Promise bình thường
+            var result1 = result[0]
+            var result2 = result[1]
+            var newResult = result1.concat(result2)
+            console.log(newResult)
+        })
+
+        var promise4 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve([1]) 
+            }, 1000)
+        })
+
+        var promise5 = Promise.reject("Lỗi") // 5. sử dụng hiển thị lỗi thì nó promiseAll sẽ bị bỏ qua
+        Promise.all([promise4, promise5])
+        .then(function(result) { 
+            var newResult = result1.concat(result2)
+            console.log(newResult)
+        })
+        .catch(function(err) {
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

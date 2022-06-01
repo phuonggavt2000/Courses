@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = ["Javascript", "PHP", 'Ruby']
+        var object = {
+            name: "Javascript",
+            price: 1000,
+            tilte: "Khóa hay"
+        }
+        // 1. Console.log(a, b, c) sẽ trả lại 3 phần tử của array
+        var [a, b, c] = array
+        console.log(a, b, c)
+
+        // 2. Console.log(a, c) sẽ trả lại 2 phần tử đầu và cuối của array
+        var [a, , c] = array
+        console.log(a, c)
+
+        // 3. Console.log(rest) sẽ trả lại 1 mảng chứa 2 phần tử giữa và cuối của array
+        var [a, ...rest] = array
+        console.log(rest)
+
+        // 4. Console.log(name, price,tilte) sẽ trả lại 1 object chứa 3 key và value
+        var { name, price, tilte } = object;
+        console.log(name, price, tilte)
+
+        // 5. Console.log(rest) sẽ trả lại 1 object chứa 2 key và value cuối
+        var { name, ...rest } = object
+        console.log(rest)
+
+        // 6. logger(1,2,3,4,5,6,7) sẽ in ra 1 mảng chứa tất cả đối số trong logger
+        const logger = (...rest) => { console.log(rest) }
+        logger(1, 2, 3, 4, 5, 6, 7)
+
+        // 7. loggerr(1,2,3,4,5,6,7) sẽ trả ra 1 mảng chứa 5 tham số cuối
+        const loggerr = (a, b, ...rest) => console.log(rest)
+        loggerr(1, 2, 3, 4, 5, 6, 7)
+
+        //8. getObject(object) sẽ lấy ra name và price của biến object
+        const getObject = ({ name, price }) => { console.log(name), console.log(price) }
+        getObject(object)
+
+        //9. getArray([1, 2, 3, 4, 5, 6, 7]) sẽ lấy ra 1 và 5 phần tử cuối
+        const getArray = ([a, b, ...rest]) => {console.log(a); console.log(rest)}
+        getArray([1, 2, 3, 4, 5, 6, 7])
+        // exercise
+        // 1. Console.log(a, b, c) sẽ trả lại 1 mảng chứa 3 phần tử của array
+        // 2. Console.log(a, c) sẽ trả lại 1 mảng chứa 2 phần tử đầu và cuối của array
+        // 3. Console.log(rest) sẽ trả lại 1 mảng chứa 2 phần tử giữa và cuối của array
+        // 4. Console.log(name, price,tilte) sẽ trả lại 1 object chứa 3 key và value
+        // 5. Console.log(rest) sẽ trả lại 1 object chứa 2 key và value cuối
+        // 6. logger(1,2,3,4,5,6,7) sẽ in ra 1 mảng chứa tất cả đối số trong logger
+        // 7. loggerr(1,2,3,4,5,6,7) sẽ trả ra 1 mảng chứa 5 tham số cuối
+    </script>
+</body>
+
+</html>

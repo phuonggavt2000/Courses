@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Object constructor:  Dùng để tạo một đối tượng Giống 1 bản thiết dùng chung cho tất cả mọi người 
+
+        // Ví dụ: Muốn tạo một User chính mình và 1 User người dùng * Note: Hàm tạo 1 đối tượng phải viết hoa chữ cái đầu
+        function User(firstName, lastName, avatar) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.avatar = avatar;
+            this.getName = function() {
+                return ` ${lastName} ${firstName}` // Tạo 1 phương thức để lấy ra "Name"
+            }
+        }
+        var author = new User("Phương", "Nguyễn", "avatar"); // Đây là User chính mình
+        var user = new User("Kiên", "Nguyễn", "avatar"); // Đây là User người dùng
+        author.title = "Người này đẹp trai" // thêm Một thuộc tính nhưng không ảnh hưởng đến User người dùng
+        user.age = 16 // thêm 1 thuộc tính nhưng không ảnh hưởng đên User chính mình
+    </script>
+</body>
+</html>

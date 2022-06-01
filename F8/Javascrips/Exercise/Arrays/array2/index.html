@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var courses = [
+            {
+                id: 1,
+                name: "Javascript",
+                coin: 0,
+                coinText: "giá: 0"
+            },
+            {
+                id: 2,
+                name: "CSS, HTML",
+                coin: 20,
+                coinText: "giá: 0"
+            },
+            {
+                id: 3,
+                name: "Ruby",
+                coin: 18,
+                coinText: "giá: 0"
+            },
+            {
+                id: 4,
+                name: "PHP",
+                coin: 0,
+                coinText: "giá: 0"
+            },
+        ]
+
+        var newCourses = courses.map(function(courses) { // 1. tạo một biến mới để thêm giá trị vào mỗi đối tượng của array
+            return {
+                id: courses.id,
+                name: `Học tập ${courses.name}`, // Thêm "Học tập" vào value của key "name"
+                coin: courses.coin,
+                coinText: `Đây là ${courses.coinText}` // Thêm "Đây là" value của key "coinText"
+            }
+        })
+
+        courses.forEach(function (courses) { // 2. Lấy ra từng phần tử của Array 
+            console.log(courses)
+        })
+
+        var examiniCoin = courses.every(function (courses) { // 3. Kiểm tra 1 điểu kiện trong mảng sai sẽ trả về "false"
+            return courses.coin === 0
+        })
+        console.log(examiniCoin)
+
+        var examiniCoin = courses.some(function(courses) { // 4. Kiểm tra 1 điểu kiện trong mảng đúng sẽ trả về "true"
+            return courses.coin === 0 
+        })
+        console.log(examiniCoin)
+
+        var examiniCoin = courses.find(function(courses) { // 5. Tìm kiếm và lấy ra 1 giá trị có "coin" bằng 0
+            return courses.coin === 0
+        })
+        console.log(examiniCoin)
+
+        var examiniCoin = courses.filter(function (courses) { // 6. Tìm kiếm và lấy ra tất cả giá trị có "coin" bằng 0
+            return courses.coin === 0
+        })
+        console.log(examiniCoin)
+
+        // exercise
+        // 1. thêm string "học tập" vào name và "Đây là" là vào sau chữ giá
+        // 2. lấy từng object trong mảng
+        // 3. kiểm tra 1 phần tử của object trong mảng không thỏa mã sẽ trả về false
+        // 4. kiểm tra  1 phần tử của object trong mảng thỏa mã sẽ trả về true
+        // 5. Lấy object có name: Ruby và PHP
+        // 6. Lấy những object có coin bằng 0
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body {
+            margin: 0;
+        }
+
+        .header {
+            height: 42px;
+            background-color: #333;
+            position: fixed;
+            /* Sẽ dữ nguyên vị trí dù kéo đi đâu */
+            top: 0;
+            left: 0;
+            right: 0;
+            /* Nó sẽ dữ ở trên dù kéo đi đâu đi nữa */
+            /* Note: Nó sẽ hiểu là Góc trên ,trái và phải là 0 độ thì nó tương đương là Width = 100%  */
+        }
+
+        ul {
+            height: 2000px;
+        /* Tăng chiều dài để có thể kéo xuống */
+        }
+
+        h1 {
+            margin-top: 50px;
+            /* Chỉnh h1 cho chuẩn hơn không bị .header che */
+        }
+
+        .bottom {
+            width: 100%;
+            height: 52px;
+            background-color: green;
+            position: fixed;
+            bottom: 0;
+            /* Nó sẽ dữ ở dưới dù kéo đi đâu đi nữa */
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bottom"></div>
+    <div class="header"></div>
+    <h1>Fixed</h1>
+    <ul>
+        <li>fixed</li>
+<!-- Khi kéo trang web thì nó sẽ giữ nguyên vị trí trên màn hình dù có kéo đi đâu đi nữa -->
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var courses = [
+            "javascript",
+            "Ruby",
+            "Java",
+            "Ruby",
+            ["ok" , "ok"]
+
+        ]
+        var courses2 = [
+            "ok"
+        ]
+        var depthArray = [1, 2,  5, 6,]
+        var courses3 = [
+            {
+                id: 1,
+                name: "Javascript",
+                coin: 34,
+                coinText: "giá: 0"
+            },
+            {
+                id: 2,
+                name: "CSS, HTML",
+                coin: 20,
+                coinText: "giá: 0"
+            },
+            {
+                id: 3,
+                name: "Ruby",
+                coin: 18,
+                coinText: "giá: 0"
+            },
+            {
+                id: 4,
+                name: "PHP",
+                coin: 56,
+                coinText: "giá: 0"
+            },
+        ]
+        // exercise 
+        // 1. Tạo Array "forEach2" giống bản chính của nó
+        // 2. Tạo Array "find2" giống bản chính của nó 
+        // 3. Tạo Array "filter2" giống bản chính của nó
+        // 4. Tạo Array "reduce2" giống bản chính của nó
+        Array.prototype.forEach2 = function (callback) { // 1. Tạo Array "forEach2" giống bản chính của nó
+            for (i = 0; i < this.length; i++) {
+                var result = callback(this[i], i)
+            }
+            return undefined
+        }
+        var course = courses.forEach2(function (value) {
+            console.log(value)
+        })
+
+        Array.prototype.find2 = function (callback) {
+            var arr = []
+            for (i = 0; i < this.length; i++) {
+                var result = callback(this[i])
+                if (result) {
+                    arr.push(this[i])
+                    break
+                }
+            }
+            return arr
+        }
+        var find = courses.find2(function (valu) {
+            return valu === "Ruby"
+        })
+        console.log(find)
+
+        Array.prototype.filter2 = function (callback) {
+            var arr = []
+            for (i = 0; i < this.length; i++) {
+                var result = callback(this[i])
+                if (result) {
+                    arr.push(this[i])
+                }
+            }
+            return arr
+        }
+        var filter2 = courses.filter2(function (valu) {
+            return valu === "Ruby"
+        })
+        console.log(filter2)
+        
+        Array.prototype.reduce2 = function (callback, result) {
+            if(arguments.length < 2) {
+                result = this[0]
+                i = 1
+            }
+            for (i = 0; i < this.length; i++) {
+                result = callback(result, this[i], i)
+            }
+            return result
+        }
+        var hig = courses3.reduce2(function(Bien, value, index){
+            return Bien + value.coin
+        }, 0)
+        console.log(hig)
+    </script>
+</body>
+
+</html>

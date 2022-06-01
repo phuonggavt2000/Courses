@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = "Javascript";
+        var price = 1000
+
+        var course = { // Cách 1: vì có biến name và key giống nhâu nên ta có thể dùng vậy
+            name, // name: "Javascript"
+            price, // price: 1000
+        }
+
+        var course = { // cách 2
+            name: name,
+            price: price,
+        }
+
+        var fieldName = "new-name";
+        var fieldPrice = "price";
+
+        var course = { // dùng biến để làm key
+            [fieldName]: "Javascrips", // new-name: Javascript
+            [fieldPrice]: 1000 // price: 1000
+        }
+
+        var obj = {
+            //  getName: function(value) {
+            //     console.log(value) // cách 1
+            // }
+            getName(value) {
+                console.log(value) // cách 2 123
+            }
+        }
+        obj.getName(123) 
+
+        console.log(course)
+    </script>
+</body>
+
+</html>

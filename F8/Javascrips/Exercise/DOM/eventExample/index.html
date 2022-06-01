@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <input type="checkbox">
+
+    <select name="" id="">
+        <option value="1">Java</option>
+        <option value="2">Ruby</option>
+        <option value="3">Javascript</option>
+    </select>
+    <script> // Event Example 1.0
+        var inputText = document.querySelector("input[type='text']")
+        inputText.oninput = function (e) { 
+            console.log(e.target.value) // 1. Khi ghi một kí tử nào đó trong "input text" sẽ lấy ra value của nó
+        }
+
+        inputText.onchange = function (e) {
+            console.log(e.target.value) // 2. khi click ra bên ngoài "input text" sẽ lấy ra value của nó
+        }
+
+        var inputCheckbox = document.querySelector("[type='checkbox']")
+        inputCheckbox.onchange = function(e) {
+            console.log(e.target.checked)// 3. Khi tích vào "input checkbox" sẽ trả về "true" và không tích sẽ trả về "false"
+        }
+
+        var selectValue = document.querySelector("select")
+        selectValue.onchange = function (e) {
+            console.log(e.target.value) // 4. khi lựa chon một trong những khóa học trên sẽ trả về value của khóa học đó
+        }
+        // exercise
+        // 1. Khi ghi một kí tử nào đó trong "input text" sẽ lấy ra value của nó
+        // 2. khi click ra bên ngoài "input text" sẽ lấy ra value của nó
+        // 3. Khi tích vào "input checkbox" sẽ trả về "true" và không tích sẽ trả về "false"
+        // 4. khi lựa chon một trong những khóa học trên sẽ trả về value của khóa học đó
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>                                     // Thuộc tính Array
+        let arr = [
+            "Javascript",
+            "Ruby",
+            "Java",
+            "React",
+            "Node Js"
+        ];
+        let arr2 = [
+            "Dark",
+            "Night"
+        ]
+        console.log(typeof arr.toString()) // 1. biến "arr" đã thành string và kiểm tra ra true
+        console.log(arr.join(" - ")) // 2. biến "arr" thành string và thêm dấu " - " dữa mỗi chữ
+        console.log(arr.pop()) // 3. xóa phần tử "Node js" trong biến "arr" và lấy nó ra
+        arr.push("Dark", "Night") // 4. thêm phần tử "Dark" và "Night" vào cuối Array
+        console.log(arr.shift()) // 5. xóa "javascrips" trong hàm và lấy nó ra
+        arr.unshift("Dark", "Night") // 6. thêm phần tử "Dark" và "Night" vào đầu mảng
+        console.log(arr.splice(2, 2, "Dark", "Night")) // 7. Xóa phần tử "Java", "React" và thêm phần tử mới vào chỗ xóa là "Dark" , "Night"
+        console.log(arr.concat(arr2)) // 8. Nỗi 2 biến "arr" và "arr2" với nhau thành 1 Array
+        console.log(arr.slice(2,3)) // 9. cắt ra "Java" trong biến "arr"
+        console.log(arr.slice(4,5)) // 10. cắt ra "Node Js" trong biến "arr"
+
+        // exercise
+        // 1. làm cho biến "arr" thành string và kiểm tra nó, có phải string không nếu là string thì phải trả về "true"
+        // 2. làm cho biến "arr" thành string và thêm dấu " - " ở mỗi chữ
+        // 3. Xóa phẩn tử "Node Js" và lấy ra nó ở trong biến "arr"
+        // 4. thêm phần tử "Dark" và "Night" vào cuối mảng của biến "arr"
+        // 5. Xóa phẩn tử "Javascript" và lấy ra nó ở trong biến "arr"
+        // 6. thêm phần tử "Dark" và "Night" vào đầu mảng của biến "arr"
+        // exercise 2:
+        // 1. Xóa phần tử "Java", "React" và thêm phần tử mới vào chỗ xóa là "Dark" , "Night"
+        // 2. Nỗi 2 biến "arr" và "arr2" với nhau thành 1 Array
+        // 3. cắt ra "Java" và "Node Js" trong "arr"
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script> // attribute: Tạo và lấy ra những attribute hợp lệ và không hợp lê
+        var ele = document.querySelector("h1")
+        ele.className = "heading" // 1. Tạo một attribute hợp lệ là 'class="heading"' vào thẻ "h1"
+
+        ele.setAttribute("head-1", "first") // 2. Tạo một atrribute không hợp lệ là 'head-1="first"' 
+        
+        var valueName = ele.className // 2. Lấy ra "value" của attribute hợp lệ 'class="heading"'
+
+        var valueHead = ele.getAttribute("head-1") // 3. Lấy ra "value" của attribute không hợp lệ 'head-1="first"'
+        console.log(valueHead)
+        // exercise 
+        // 1. Tạo một attribute là 'class="heading"' vào thẻ "h1"
+        // 2. Tạo một atrribute là 'head-1="first"'
+        // 3. Lấy ra "value" của attribute 'class="heading"' và 'head-1="first"'
+    </script>
+</body>
+</html>
