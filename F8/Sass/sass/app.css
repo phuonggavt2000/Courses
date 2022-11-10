@@ -1,0 +1,44 @@
+h1,
+h2 {
+  color: green;
+  background-color: orange;
+}
+
+nav {
+  background-color: orange;
+}
+nav ul {
+  border: solid 5px red;
+}
+nav ul li {
+  font-size: 30px;
+}
+nav ul li:hover {
+  opacity: 0.7;
+}
+
+.success {
+  font-size: 20px;
+  background-color: blue;
+  color: #fff;
+  font-size: 40px;
+}
+.success:hover {
+  cursor: pointer;
+}
+
+.error {
+  font-size: 20px;
+  background-color: red;
+  color: yellow;
+}
+.error:hover {
+  cursor: pointer;
+}
+
+.box {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+} /*# sourceMappingURL=app.css.map */

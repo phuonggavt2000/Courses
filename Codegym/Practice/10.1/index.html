@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const time1 = (number) => {
+        setTimeout(() => console.log(number), 2000);
+      };
+      const time = async (number) => {
+        const promise = new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(number);
+          }, 2000);
+        });
+        const resultNumber = await promise;
+
+        console.log(resultNumber);
+        time1(2);
+      };
+
+      time(1);
+    </script>
+  </body>
+</html>

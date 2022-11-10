@@ -1,0 +1,38 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+html, body {
+  background: url(./img/bg.jpg) top no-repeat;
+}
+html .container-fluid, body .container-fluid {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+html .primary-color, body .primary-color {
+  color: white;
+}
+html .primary-bg, body .primary-bg {
+  background-color: white;
+}
+html .secondary-color, body .secondary-color {
+  color: #F8B547;
+}
+html .secondary-bg, body .secondary-bg {
+  background-color: #F8B547;
+}
+html .primary-border, body .primary-border {
+  border: 2px solid white;
+}
+html .secondary-border, body .secondary-border {
+  border: 2px solid #F8B547;
+}
+html .bnt-register:hover, body .bnt-register:hover {
+  background-color: none;
+  color: #F8B547;
+}
+html .bnt-discover:hover, body .bnt-discover:hover {
+  background-color: white !important;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

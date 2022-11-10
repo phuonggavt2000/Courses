@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+      body {
+        height: 100vh;
+      }
+      .header {
+        height: 30%;
+        background-color: blue;
+        filter: brightness(60%);
+      }
+
+      .header__top {
+        box-sizing: border-box;
+        height: 70%;
+        width: 100%;
+        float: left;
+        background-color: blue;
+      }
+
+      .header__logo {
+        float: left;
+        width: 30%;
+        height: 100%;
+        border: 1px solid black;
+      }
+
+      .header__logo span {
+        display: inline-block;
+        margin: auto auto;
+      }
+
+      .header__banner {
+        float: left;
+        height: 100%;
+        width: 70%;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      .header__link {
+        height: 30%;
+      }
+
+      .container {
+        background-color: aqua;
+        height: 60%;
+      }
+
+      .container__left {
+        width: 20%;
+        height: 100%;
+      }
+
+      .container__content {
+        width: 60%;
+        height: 100%;
+      }
+
+      .container__right {
+        width: 20%;
+        height: 100%;
+      }
+
+      footer {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__top">
+        <div class="header__logo"><span>LOGO</span></div>
+        <div class="header__banner"><span>BANNER</span></div>
+      </div>
+      <div class="header__link">link</div>
+    </div>
+
+    <div class="container">
+      <div class="container__left"></div>
+      <div class="container__content"></div>
+      <div class="container__right"></div>
+    </div>
+
+    <div class="footer"></div>
+  </body>
+</html>

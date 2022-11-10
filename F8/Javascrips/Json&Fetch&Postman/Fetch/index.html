@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var albumsApi = "https://jsonplaceholder.typicode.com/albums";
+      fetch(albumsApi)
+        .then((response) => response.json())
+        .then((json) => {
+          let array = json.map((value) => {
+            return `<h1> ${value.id} </h1> <p> ${value.title} </p>`;
+          });
+          let html = array.join("");
+          document.querySelector("body").innerHTML = html;
+        });
+
+      // exercise
+      // 1. Chuyển đổi URL="https://jsonplaceholder.typicode.com/albums" thành Javascrips Types
+      // 2. Lấy userId chứa thẻ "h1" và title chứa thẻ "p" cho vào 1 mảng
+      // 3. Và chuyển mảng đó hiển thị thành HTML trong thẻ div
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+@import "./variable.scss";
+
+h1 {
+    color: $bgColor;
+    background-color: $mainColor;
+}
+
+nav {
+    background-color: orange;
+    
+    ul {
+        border: solid 5px red;
+
+        li {
+            font-size: 30px;
+
+            &:hover {
+                opacity: $opacityPink;
+            }
+        }
+    }
+}
+
+@mixin button($bgButton, $color) {
+    font-size: 20px;
+    background-color: $bgButton;
+    color: $color;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.success{
+    @include button(blue, #fff);
+    font-size: 40px;
+}
+
+.error {
+    @include button(red, yellow);
+}
+
+h2 {
+    @extend h1
+};
+
+
+@mixin box($stateBox: "error") {
+    @if($stateBox == "success") {
+        margin-top: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: green;
+    }
+    @if($stateBox == "error") {
+        margin-top: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    
+}
+
+.box-1 {
+   @include box("error")
+}
+
+.box-2 {
+    @include box("success")
+ }
+ 
